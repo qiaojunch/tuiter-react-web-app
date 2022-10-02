@@ -1,0 +1,123 @@
+
+body {
+ font-family: Arial;
+ background-color: black;
+ color: white;
+}
+
+h1 {
+ margin: 0;
+}
+h3 {
+ margin: 0;
+}
+p {
+ margin: 0;
+}
+hr {
+  clear: both;
+  border: none;
+  margin: 0;
+  height: 1px;
+  color: white;
+  background-color: grey;
+}
+.wb-border {
+ border: 1px solid rgb(110, 118, 125);
+}
+
+.wb-title-container {
+ padding: 12px 16px;
+}
+.wb-title-container h3 {
+ font-size: 13px;
+}
+
+.wb-title-text {
+ font-size: 20px;
+}
+.wb-handler-text {
+ color: rgb(110, 118, 125);
+}
+
+.wb-post-author-name {
+ font-size: 15px;
+}
+
+
+.wb-post-content {
+ font-size: 15px;
+ width: 506px;
+ margin-bottom: 12px;
+}
+
+.wb-post-relative {
+ position: relative;
+}
+.wb-avatar-img {
+ width: 48px;
+ height: 48px;
+ border-radius: 48px;
+}
+
+.wb-avatar-position {
+ position: absolute;
+ margin: 12px 16px;
+}
+
+.wb-post-position {
+ position: relative;
+ margin: 12px 16px 12px 78px;
+}
+
+.wb-post-img {
+ width: 504px;
+ height: 264px;
+ border-top-left-radius: 20px;
+ border-top-right-radius: 20px;
+}
+
+.wb-post-img-position {
+ margin-left: 78px;
+ margin-top: 24px;
+ width: 504px;
+}
+
+.wb-img-text-border {
+ border-radius: 20px;
+}
+
+.wb-img-text {
+ width: auto;
+ font-size: 15px;
+ padding: 12px;
+}
+
+.wb-img-text p {
+ margin-top: 5px;
+ color: grey;
+}
+
+.wb-post-footer {
+ width: 506px;
+ color: grey;
+}
+.wb-post-footer ul{
+ display: flex;
+ align-items: stretch;
+ justify-content: space-between;
+ margin: 12px 0 15px 48px;
+}
+
+.wb-post-footer li {
+ list-style-type: none;
+ display: inline;
+}
+
+.wb-post-footer span {
+ margin-left: 12px;
+}
+
+.wb-color-red {
+ color: red;
+}

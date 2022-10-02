@@ -198,6 +198,236 @@ p#id-selector-2 {
    float: left;
 }
 
+.rotate-paragraph {
+ width: 250px;
+ height: 250px;
+ transform: rotate(90deg);
+}
+.rotate-list {
+   transform: rotate(12deg);
+   width: 100px;
+   background-color: red;
+   color: white;
+}
+.rotate-list-items li {
+   width: 100px;
+   text-align: right;
+}
+.rotate-list-items li:nth-child(1) {
+   transform: rotate(-10deg);
+   background-color: yellow;
+}
+.rotate-list-items li:nth-child(2) {
+   transform: rotate(2deg);
+   background-color: blue;
+   color: white;
+}
+.rotate-list-items li:nth-child(3) {
+   transform: rotate(10deg);
+   background-color: red;
+}
+.rotate-image {
+   transform: rotate(-10deg);
+}
+.rotate-table {
+   position: relative;
+   left: 50px;
+   transform: rotate(15deg);}
+.rotate-table tr:nth-child(1) {
+   background-color: black;
+   color: white;}
+.rotate-table tr:nth-child(n+2) {
+   background-color: yellow;}
+.rotate-table tr:nth-child(n+5) {
+   background-color: blue;
+   color: white;}
+.rotate-table tr:nth-child(n+8) {
+   background-color: red;}
+.rotate-table tr:nth-child(n+11) {
+   background-color: green;
+   color: white;
+}
+
+
+.gradients-linear {
+ background: linear-gradient(yellow, red);
+   width: 200px;
+   height: 200px;
+}
+.gradients-linear-blue-yellow {
+ background: linear-gradient(blue, yellow);
+   width: 200px;
+   height: 200px;
+}
+
+.gradients-radial {
+ background: radial-gradient(yellow, green);
+ width: 200px;
+ height: 200px;
+}
+.gradients-radial-blue-orange {
+ background: radial-gradient(blue, orange);
+ width: 200px;
+ height: 200px;
+}
+
+.gradients-positioned {
+ background:
+  radial-gradient(
+   at top left, blue, red);
+ width: 200px;
+ height: 200px;
+ color: white;
+}
+.gradients-positioned-top-right {
+ background:
+  radial-gradient(
+   at top right, orange, blue);
+ width: 200px;
+ height: 200px;
+ color: white;
+}
+
+.animation-keyframes {
+   position: relative;
+   top: 0px;
+   animation-duration: 7s;
+   animation-name: slidein;
+   width: 200px;
+   height: 200px;
+   background-color: red;
+   color: white;
+}
+@keyframes slidein {
+  from {
+    position: relative;
+    top: 0px;
+    font-size: 100%;
+    margin-left: 100%;
+    width: 200px;
+    height: 200px;
+    background-color: yellow;
+    color: black;
+  }
+  50% {
+    position: relative;
+    top: -200px;
+    font-size: 300%;
+    margin-left: 25%;
+    width: 400px;
+    height: 400px;
+    background-color: blue;
+    color: white;
+  }
+  to {
+    position: relative;
+    top: 0px;
+    font-size: 100%;
+    margin-left: 0%;
+    width: 200px;
+    height: 200px;
+    background-color: red;
+    color: white;
+  }
+}
+
+
+.animation-keyframes-inAndOut {
+  animation-duration: 3s;
+  animation-name: slidein-infinite;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+@keyframes slidein-infinite {
+  from {
+    margin-left: 100%;
+    width: 300%;
+  }
+
+  to {
+    margin-left: 0%;
+    width: 100%;
+  }
+}
+
+
+.box {
+  border: solid 3px grey;
+  margin: 10px;
+  padding: 20px;
+}
+.flex-container-center {
+  display: flex;
+  border: solid 20px yellow;
+  justify-content: center;
+}
+.flex-container-end {
+  display: flex;
+  border: solid 20px yellow;
+  justify-content: end;
+}
+.flex-container-space-around {
+  display: flex;
+  border: solid 20px yellow;
+  justify-content: space-around;
+}
+
+.flex-container-align-start {
+  border: solid 20px black;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  flex-direction: column;
+  display: flex;
+}
+.flex-container-align-center {
+  display: flex;
+  border: solid 20px black;
+  justify-content: space-evenly;
+  align-items: flex-center;
+}
+.flex-container{
+  display: flex;
+  border: solid 20px black;
+}
+.flex-container > .box {
+   flex-basis: 100%;
+}
+
+
+@media (min-width: 0px)
+   and (max-width: 500px) {
+   body {
+       background-color: yellow;
+   }
+   .media-query-text {
+       background-color: blue;
+       color: white;
+   }
+}
+@media (min-width: 500px)
+    and (max-width: 1000px {
+    body {
+        background-color: orange;
+    }
+    .media-query-text {
+        background-color: black;
+        color: white;
+    }
+}
+@media (min-width: 1000px)
+   and (max-width: 1500px) {
+  body {
+    background-color: orange;
+    color: white;
+  }
+  .media-query-text {
+    background-color: red;
+    color: white;
+  }
+}
+
+
+
 
 
 

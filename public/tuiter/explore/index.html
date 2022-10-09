@@ -14,80 +14,84 @@
 <body>
 <div class="container-fluid">
     <div class="row mt-1 mb-1">
-        <div class="col-sm-1 col-md-1 col-lg-1 col-xl-2">
+        <div id="wb-left-bar" class="col-sm-1 col-md-1 col-lg-1 col-xl-2">
             <div class="list-group">
-                <div class="list-group-item">
+                <div class="wb-list-item list-group-item">
                     <i class="fab fa-twitter"></i>
                 </div>
-                <div class="list-group-item list-group-item-action">
+                <div class="wb-list-item list-group-item list-group-item-action">
                     <div class="d-block"><i class="fas fa-home float-start mt-1 me-1"></i></div>
-                    <div class="d-none d-xl-block"><a class="text-decoration-none" href="#">Home</a></div>
+                    <div class="d-none d-xl-block"><a class="wb-white text-decoration-none" href="#">Home</a></div>
                 </div>
-                <div class="list-group-item list-group-item-action">
+                <div class="wb-list-item list-group-item list-group-item-action">
                     <div class="d-block"><i class="fas fa-hashtag float-start mt-1 me-1"></i></div>
-                    <div class="d-none d-xl-block"><a class="text-decoration-none" href="#">Notifications</a></div>
+                    <div class="d-none d-xl-block"><a class="wb-white wb-highlighted text-decoration-none" href="#">Explore</a></div>
                 </div>
-                <div class="list-group-item list-group-item-action">
+                <div class="wb-list-item list-group-item list-group-item-action">
+                    <div class="d-block"><i class="fas fa-bell float-start mt-1 me-1"></i></div>
+                    <div class="d-none d-xl-block"><a class="wb-white text-decoration-none" href="#">Notifications</a></div>
+                </div>
+                <div class="wb-list-item list-group-item list-group-item-action">
                     <div class="d-block"><i class="fas fa-envelope float-start mt-1 me-1"></i></div>
-                    <div class="d-none d-xl-block"><a class="text-decoration-none" href="#">Messages</a></div>
+                    <div class="d-none d-xl-block"><a class="wb-white text-decoration-none" href="#">Messages</a></div>
                 </div>
-                <div class="list-group-item list-group-item-action">
+                <div class="wb-list-item list-group-item list-group-item-action">
                     <div class="d-block"><i class="fas fa-bookmark float-start mt-1 me-1"></i></div>
-                    <div class="d-none d-xl-block"><a class="text-decoration-none" href="#">Bookmarks</a></div>
+                    <div class="d-none d-xl-block"><a class="wb-white text-decoration-none" href="#">Bookmarks</a></div>
                 </div>
-                <div class="list-group-item list-group-item-action">
+                <div class="wb-list-item list-group-item list-group-item-action">
                     <div class="d-block"><i class="fas fa-list float-start mt-1 me-1"></i></div>
-                    <div class="d-none d-xl-block"><a class="text-decoration-none" href="#">Lists</a></div>
+                    <div class="d-none d-xl-block"><a class="wb-white text-decoration-none" href="#">Lists</a></div>
                 </div>
-                <div class="list-group-item list-group-item-action">
+                <div class="wb-list-item list-group-item list-group-item-action">
                     <div class="d-block"><i class="fas fa-user float-start mt-1 me-1"></i></div>
-                    <div class="d-none d-xl-block"><a class="text-decoration-none" href="#">Profile</a></div>
+                    <div class="d-none d-xl-block"><a class="wb-white text-decoration-none" href="#">Profile</a></div>
                 </div>
-                <div class="list-group-item list-group-item-action">
+                <div class="wb-list-item list-group-item list-group-item-action">
                     <div class="d-block"><i class="fas fa-comment-dots float-start mt-1 me-1"></i></div>
-                    <div class="d-none d-xl-block"><a class="text-decoration-none" href="#">More</a></div>
+                    <div class="d-none d-xl-block"><a class="wb-white text-decoration-none" href="#">More</a></div>
                 </div>
             </div>
             <button class="btn btn-primary w-100 rounded-pill mt-1">Tuit</button>
         </div>
-        <div class="col-sm-11 col-md-11 col-lg-7 col-xl-6">
-            <div class="row">
+        <div id="wb-main-container" class="wb-b-left wb-b-right col-sm-11 col-md-11 col-lg-7 col-xl-6">
+            <div class="row wb-pl-10">
                 <div class="col-10 position-relative">
                     <span class="position-absolute mt-2 ms-2"><i class="fas fa-search"></i></span>
-                    <input class="form-control rounded-pill ps-5" placeholder="Search Tuiter"/>
+                    <input class="wb-input form-control rounded-pill ps-5" placeholder="Search Tuiter"/>
                 </div>
                 <div class="col-2">
                     <i class="fas fa-cog fa-lg mt-2"></i>
                 </div>
             </div>
 
-            <ul class="nav nav-tabs mt-1 mb-1">
+            <ul class="wb-main-nav-bar nav nav-tabs mt-1 mb-1">
                 <li class="nav-item">
-                    <a class="nav-link active" href="#">For you</a>
+                    <a class="wb-nav-bar-item nav-link" href="#">For you</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Trending</a>
+                    <a class="wb-nav-bar-item nav-link" href="#">Trending</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">COVID-19</a>
+                    <a class="wb-nav-bar-item nav-link" href="#">COVID-19</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">News</a>
+                    <a class="wb-nav-bar-item nav-link" href="#">News</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Sports</a>
+                    <a class="wb-nav-bar-item nav-link" href="#">Sports</a>
                 </li>
                 <li class="nav-item d-none d-md-block">
-                    <a class="nav-link" href="#" tabindex="-1">Entertainment</a>
+                    <a class="wb-nav-bar-item wb-highlighted nav-link" href="#" tabindex="-1">Entertainment</a>
                 </li>
             </ul>
-            <div class="position-relative">
+            <div class="wb-b-top wb-b-bottom position-relative">
                 <img src="../../images/starship.jpg" width="100%"/>
                 <h1 class="position-absolute bottom-0 left-0 text-white">SpaceX's starship</h1>
             </div>
 
             <ul class="list-group mt-1">
-                <li class="list-group-item">
+                <li class="wb-list-item list-group-item">
                     <div class="row">
                         <div class="col-10">
                             <div class="text-secondary">Web Development</div>
@@ -99,7 +103,7 @@
                         </div>
                     </div>
                 </li>
-                <li class="list-group-item">
+                <li class="wb-list-item list-group-item">
                     <div class="row">
                         <div class="col-10">
                             <div>JavaScript<span class="text-secondary"><i class="fas fa-badge-check"></i> - 2h</span></div>
@@ -111,7 +115,7 @@
                         </div>
                     </div>
                 </li>
-                <li class="list-group-item">
+                <li class="wb-list-item list-group-item">
                     <div class="row">
                         <div class="col-10">
                             <div class="text-secondary">Web Development</div>
@@ -123,7 +127,7 @@
                         </div>
                     </div>
                 </li>
-                <li class="list-group-item">
+                <li class="wb-list-item list-group-item">
                     <div class="row">
                         <div class="col-10">
                             <div class="text-secondary">Web Development</div>
@@ -138,10 +142,10 @@
             </ul>
 
         </div>
-        <div class="d-none d-lg-block col-lg-4 col-xl-4">
+        <div id="wb-right-bar" class="d-none d-lg-block col-lg-4 col-xl-4">
             <ul class="list-group">
-                <li class="list-group-item">Who to Follow</li>
-                <li class="list-group-item">
+                <li class="wb-follow-list-item list-group-item">Who to Follow</li>
+                <li class="wb-follow-list-item list-group-item">
                     <div class="row">
                         <div class="col-8">
                             <img class="float-start rounded-circle me-1" src="../../images/java-logo.png" width="30%"/>
@@ -151,11 +155,11 @@
                             </div>
                         </div>
                         <div class="col-4">
-                            <button class="btn btn-primary rounded-pill" width="100%">Follow</button>
+                            <button class="wb-follow-btn btn btn-primary rounded-pill" width="100%">Follow</button>
                         </div>
                     </div>
                 </li>
-                <li class="list-group-item">
+                <li class="wb-follow-list-item list-group-item">
                     <div class="row">
                         <div class="col-8">
                             <img class="float-start rounded-circle me-1" src="../../images/relativitySpace-logo.jpeg" width="30%"/>
@@ -165,11 +169,11 @@
                             </div>
                         </div>
                         <div class="col-4">
-                            <button class="btn btn-primary rounded-pill" width="100%">Follow</button>
+                            <button class="wb-follow-btn btn btn-primary rounded-pill" width="100%">Follow</button>
                         </div>
                     </div>
                 </li>
-                <li class="list-group-item">
+                <li class="wb-follow-list-item list-group-item">
                     <div class="row">
                         <div class="col-8">
                             <img class="float-start rounded-circle me-1" src="../../images/virgin-logo.svg" width="30%"/>
@@ -179,11 +183,11 @@
                             </div>
                         </div>
                         <div class="col-4">
-                            <button class="btn btn-primary rounded-pill" width="100%">Follow</button>
+                            <button class="wb-follow-btn btn btn-primary rounded-pill" width="100%">Follow</button>
                         </div>
                     </div>
                 </li>
-                <li class="list-group-item">
+                <li class="wb-follow-list-item list-group-item">
                     <div class="row">
                         <div class="col-8">
                             <img class="float-start rounded-circle me-1" src="../../images/nasa-logo.png" width="30%"/>
@@ -193,11 +197,11 @@
                             </div>
                         </div>
                         <div class="col-4">
-                            <button class="btn btn-primary rounded-pill" width="100%">Follow</button>
+                            <button class="wb-follow-btn btn btn-primary rounded-pill" width="100%">Follow</button>
                         </div>
                     </div>
                 </li>
-                <li class="list-group-item">
+                <li class="wb-follow-list-item list-group-item">
                     <div class="row">
                         <div class="col-8">
                             <img class="float-start rounded-circle me-1" src="../../images/tesla-logo.png" width="30%"/>
@@ -207,7 +211,7 @@
                             </div>
                         </div>
                         <div class="col-4">
-                            <button class="btn btn-primary rounded-pill" width="100%">Follow</button>
+                            <button class="wb-follow-btn btn btn-primary rounded-pill" width="100%">Follow</button>
                         </div>
                     </div>
                 </li>

@@ -34,11 +34,11 @@ const ExploreComponent = () => {
         </li>
       </ul>
                     <!-- image with overlaid text -->
-      <div class="wb-b-top wb-b-bottom position-relative">
+      <div class="mb-2 position-relative">
           <img src="../../images/starship.jpg" width="100%"/>
           <h1 class="position-absolute bottom-0 left-0 text-white">SpaceX's starship</h1>
       </div>
-
+                    <!-- post summary list -->
       ${PostSummaryList()}
     `);
 }

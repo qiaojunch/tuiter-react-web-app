@@ -1,11 +1,18 @@
-const NavigationSidebar = () => {
+const NavigationSidebar = (active) => {
+    var linkClass = "list-group-item";
+
+    const home = active === "home" ? linkClass.concat(" ", "active") : linkClass;
+    const explore = active === "explore" ? linkClass.concat(" ", "active") : linkClass;
+    console.log(home);
+    console.log(explore);
+
     return (`
    <div class="list-group">
      <a class="list-group-item" href="/">
        <i class="fab fa-twitter"></i></a>
-     <a class="list-group-item" href="../HomeScreen/index.html">
+     <a class=${home} href="../HomeScreen/index.html">
        <i class="fas fa-home float-start mt-1 me-1"></i><span class="d-none d-xl-block">Home</span></a>
-     <a class="list-group-item" href="../ExploreScreen/index.html">
+     <a class=${explore} href="../ExploreScreen/index.html">
             <i class="fas fa-hashtag float-start mt-1 me-1"></i><span class="d-none d-xl-block">Explore</span></a>
      <a class="list-group-item" href="/">
             <i class="fas fa-bell float-start mt-1 me-1"></i><span class="d-none d-xl-block">Notifications</span></a>

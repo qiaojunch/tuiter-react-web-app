@@ -12,7 +12,7 @@ const ExploreComponent = () => {
             <i class="fas fa-cog fa-lg mt-2"></i>
         </div>
       </div>
-      <ul class="nav mb-2 nav-tabs">
+      <ul class="nav mb-2 nav-tabs mt-2">
                       <!-- tabs -->
         <li class="nav-item">
             <a class="wb-nav-bar-item nav-link active" href="#">For you</a>

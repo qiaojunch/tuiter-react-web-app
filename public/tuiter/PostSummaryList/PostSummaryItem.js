@@ -1,7 +1,7 @@
 
 function PostSummaryList (post) {
   return (`
-      <li class="wb-list-item list-group-item">
+      <li class="list-group-item">
           <div class="row">
               <div class="col-10">
                   <div class="text-secondary">${post.topic}</div>

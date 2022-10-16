@@ -20,9 +20,9 @@ function PostItem(item) {
                         </div>
                     </div>
                     <div class="d-flex">
-                        <div class="flex-fill p-2"><i class="fas fa-comment"></i><span> 123k</span></div>
-                        <div class="flex-fill p-2"><i class="fas fa-retweet"></i><span> 123k</span></div>
-                        <div class="flex-fill p-2"><i class="fas fa-heart"></i><span> 123k</span></div>
+                        <div class="flex-fill p-2"><i class="fas fa-comment"></i><span> ${item.commentNum}</span></div>
+                        <div class="flex-fill p-2"><i class="fas fa-retweet"></i><span> ${item.shareNum}</span></div>
+                        <div class="flex-fill p-2"><i class="fas fa-heart"></i><span> ${item.likeNum}</span></div>
                         <div class="flex-fill p-2"><i class="fas fa-upload"></i></div>
                     </div>
                 </div>

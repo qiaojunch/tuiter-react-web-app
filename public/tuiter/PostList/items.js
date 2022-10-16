@@ -8,6 +8,9 @@ export default [
         shareImage: "../../images/post1-img.jpeg",
         shareTopic: "Lorem Ipsum is simply dummy text of the printing and typesetting",
         shareContent: "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.",
+        commentNum: "123k",
+        shareNum: "4.5k",
+        likeNum: "23k",
     },
     {
         avatar: "../../images/post-avatar2.jpg",
@@ -18,5 +21,8 @@ export default [
         shareImage: "../../images/post2-img.jpeg",
         shareTopic: "",
         shareContent: "",
+        commentNum: "2.3k",
+        shareNum: "3.3k",
+        likeNum: "5.2k",
     },
 ];

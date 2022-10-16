@@ -3,9 +3,9 @@ const NavigationSidebar = () => {
    <div class="list-group">
      <a class="list-group-item" href="/">
        <i class="fab fa-twitter"></i></a>
-     <a class="list-group-item" href="/">
+     <a class="list-group-item" href="../HomeScreen/index.html">
        <i class="fas fa-home float-start mt-1 me-1"></i><span class="d-none d-xl-block">Home</span></a>
-     <a class="list-group-item" href="/">
+     <a class="list-group-item" href="../ExploreScreen/index.html">
             <i class="fas fa-hashtag float-start mt-1 me-1"></i><span class="d-none d-xl-block">Explore</span></a>
      <a class="list-group-item" href="/">
             <i class="fas fa-bell float-start mt-1 me-1"></i><span class="d-none d-xl-block">Notifications</span></a>

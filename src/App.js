@@ -1,25 +1,24 @@
-import logo from './logo.svg';
+//import logo from './logo.svg';
 import './App.css';
+import Labs from './labs';
+import Tuiter from './tuiter';
+import HelloWord from './labs/a6/hello-world';
+import {BrowserRouter, Link} from 'react-router-dom';   // listen to url route change
+import {Route, Routes} from 'react-router';
+import Nav from './nav';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Welcome to Web Development Fall 2022
-        </p>
-        <p> This is branch A2 </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+        <div className="container">
+            <Nav />
+            <Routes>
+                <Route index element={<HelloWord />} />
+                <Route path="/labs" element={<Labs />} />
+                <Route path="/tuiter" element={<Tuiter />} />
+            </Routes>
+        </div>
+    </BrowserRouter>
   );
 }
 

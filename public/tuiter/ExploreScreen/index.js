@@ -1,6 +1,6 @@
 import NavigationSidebar from "../NavigationSideBar/index.js";
 import WhoToFollowList from "../WhoToFollowList/index.js";
-import PostSummaryList from "../PostSummaryList/index.js";
+import PostSummaryList from "../PostSummaryListPublic/index.js";
 import ExploreComponent from "../ExploreScreen/ExploreComponent.js";
 
 function exploreComponent() {

@@ -10,12 +10,12 @@ import Nav from './nav';
 function App() {
   return (
     <BrowserRouter>
-        <div className="container">
-            <Nav />
+        <div className="container-fluid">
+            
             <Routes>
                 <Route index element={<HelloWord />} />
                 <Route path="/labs" element={<Labs />} />
-                <Route path="/tuiter" element={<Tuiter />} />
+                <Route path="/tuiter/*" element={<Tuiter />} />
             </Routes>
         </div>
     </BrowserRouter>

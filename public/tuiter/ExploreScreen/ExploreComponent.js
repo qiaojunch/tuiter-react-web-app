@@ -1,4 +1,4 @@
-import PostSummaryList from "../PostSummaryList/index.js";
+import PostSummaryList from "../PostSummaryListPublic/index.js";
 
 const ExploreComponent = () => {
     return(`

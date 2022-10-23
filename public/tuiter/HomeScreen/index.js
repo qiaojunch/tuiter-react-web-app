@@ -1,5 +1,5 @@
 import NavigationSidebar from "../NavigationSideBar/index.js";
-import PostSummaryList from "../PostSummaryList/index.js";
+import PostSummaryList from "../PostSummaryListPublic/index.js";
 import PostList from "../PostList/index.js";
 
 

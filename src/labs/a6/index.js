@@ -3,6 +3,7 @@ import Styles from './styles';
 import ConditionalOutput from './conditional-output';
 import TodoList from './todo/todo-list';
 import Nav from '../../nav';
+import app from '../a7';
 
 function Assignment6() {
     return (
@@ -13,6 +14,7 @@ function Assignment6() {
         <ConditionalOutput />
         <Styles />
         <Classes />
+        <app />
     </div>
     )
 }

@@ -14,7 +14,7 @@ function App() {
             
             <Routes>
                 <Route index element={<HelloWord />} />
-                <Route path="/labs" element={<Labs />} />
+                <Route path="/labs/*" element={<Labs />} />
                 <Route path="/tuiter/*" element={<Tuiter />} />
             </Routes>
         </div>

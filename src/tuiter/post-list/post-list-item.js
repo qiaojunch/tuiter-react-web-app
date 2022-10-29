@@ -17,7 +17,7 @@ const PostListItem = (
         }
     }) => {
     return (
-        <li className="list-group-item border p-2">
+    <li className="list-group-item border p-2">
         <div className="row">
             <div className="col-2">
                 <img className="rounded-circle" src={`/images/${item.avatar}`} width="100%"/>

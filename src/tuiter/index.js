@@ -5,9 +5,21 @@ import WhoToFollowList from './who-to-follow-list';
 import ExploreComponent from './explore';
 import HomeComponent from './home';
 import PostSummaryList from './post-summary-list';
+// import data for redux
+import whoReducer from "./reducers/who-reducer";
+
+import { configureStore } from '@reduxjs/toolkit';
+import {Provider} from "react-redux";   // provide store for applications
+import tuitsReducer from './tuits/tuits-reducer';
+
+// configure the store
+const store = configureStore(
+    {reducer: {who: whoReducer, tuits: tuitsReducer}}
+);
 
 function Tuiter() {
     return (
+        <Provider store={store}>
         <div className='container-fluid mt-2 mb-2'>
             <div className='row'>
                 <div className='col-2 col-md-2 col-lg-2 col-xl-2'>
@@ -24,6 +36,7 @@ function Tuiter() {
                 </div> 
             </div>
         </div>
+        </Provider>
     );
 };
 export default Tuiter;

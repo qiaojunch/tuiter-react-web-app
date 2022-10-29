@@ -1,5 +1,7 @@
 import React from "react";
+import { useDispatch } from "react-redux";
 import TuitStats from "./tuit-stats";
+import { deleteTuit } from "./tuits-reducer";
 
 const TuitItem = ({
     tuit = {
@@ -17,13 +19,20 @@ const TuitItem = ({
         "tuit": "You want to wake up in the morning and think the future is going to be great - and that’s what being a spacefaring civilization is all about. It’s about believing in the future and thinking that the future will be better than the past. And I can’t think of anything more exciting than going out there and being among the stars"    
     }
 }) => {
+    const dispatch = useDispatch();
+    const deleteTuitHandler = (id) => {
+        dispatch(deleteTuit(id));
+    }
+
     return (
         <li className="list-group-item border p-2">
             <div className="row">
-                <div className="col-2">
-                    <img className="rounded-circle" src={`/images/${tuit.image}`} width="100%" />
+                <div className="col-auto">
+                    <img className="rounded-circle float-end" src={`/images/${tuit.image}`} width={60} />
                 </div>
                 <div className="col-10">
+                    <i className="bi bi-x-lg float-end"
+                        onClick={() => deleteTuitHandler(tuit._id)}></i>
                     <div>
                         {tuit.userName}<span> <i className="bi bi-patch-check-fill"></i> {tuit.handle}</span><i className="bi bi-dot"></i>{tuit.time}
                     </div>

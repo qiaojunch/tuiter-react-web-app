@@ -6,14 +6,15 @@ import ExploreComponent from './explore';
 import HomeComponent from './home';
 import ProfileComponent from './profile';
 // import data for redux
-import whoReducer from "./reducers/who-reducer";
 import { configureStore } from '@reduxjs/toolkit';
 import {Provider} from "react-redux";   // provide store for applications
+import whoReducer from "./reducers/who-reducer";
 import tuitsReducer from './tuits/tuits-reducer';
+import profileReducer from './profile/profile-reducer';
 
 // configure the store
 const store = configureStore(
-    {reducer: {who: whoReducer, tuits: tuitsReducer}}
+    {reducer: {who: whoReducer, tuits: tuitsReducer, profile: profileReducer}}
 );
 
 function Tuiter() {

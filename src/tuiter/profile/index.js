@@ -1,21 +1,9 @@
 import "./index.css";
+import { useSelector } from "react-redux";
 
-const ProfileComponent = ({
-    user =  {
-        "firstName": "Jun",
-        "lastName": "Chen",
-        "handle": "@junChen",
-        "profilePicture": "post-avatar.jpg",
-        "bannerPicture": "sky.png",
-        "bio": "Northeastern graduate student studying web development in Fall 2022! a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years.",
-        "website": "youtube.com/webdevtv",
-        "location": "Boston, MA",
-        "dateOfBirth": "06/20/1995",
-        "dateJoined":"4/2013",
-        "followingCount": 550,
-        "followersCount": 121
-      }
-}) => {
+const ProfileComponent = () => {
+    const user = useSelector(state => state.profile);
+    
     return (
         <div>
             <div className="position-relative">

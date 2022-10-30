@@ -1,15 +1,23 @@
-import "./index.css";
 import { useSelector } from "react-redux";
+import { useNavigate } from "react-router";
 
 const ProfileComponent = () => {
     const user = useSelector(state => state.profile);
-    
+    const navigate = useNavigate();
+
+    // handle click and navigate to edit-profile route
+    const navigateEditProfile = () => {
+        navigate("editProfile");
+    }
+
     return (
         <div>
             <div className="position-relative">
                 <img src="/images/profile-banner.jpeg" width="100%" />
                 <img className="rounded-circle translate-middle position-relative wd-profile-pos" src={`/images/${user.profilePicture}`} width={80} />
-                <button className="btn btn-light rounded-pill border float-end mt-2">Edit profile</button>
+                <button 
+                    onClick={navigateEditProfile}
+                    className="btn btn-light rounded-pill border float-end mt-2">Edit profile</button>
             </div>
             <div>
                 <h3 className="mb-0">{user.firstName} {user.lastName}</h3>

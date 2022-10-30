@@ -11,7 +11,6 @@ const WhatsHappening = () => {
         const newTuit = {
             tuit: whatsHappening
         }
-        console.log(newTuit)
         // send tuit as action payload
         dispatch(createTuit(newTuit));
     }

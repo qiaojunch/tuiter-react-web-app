@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useReducer, useState } from "react";
 import { useSelector } from "react-redux";
 import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router";
@@ -6,21 +6,24 @@ import { updateProfile } from "../profile/profile-reducer";
 
 const EditProfileComponent = () => {
     const user = useSelector(state => state.profile);
-    let [fName, setFirstname] = useState(user.firstName);
-    let [lName, setLastname] = useState(user.lastName);
+    let [fullName, setFullName] = useState(`${user.firstName} ${user.lastName}`);
     let [bio, setBio] = useState(user.bio);
     let [location, setLocation] = useState(user.location);
     let [website, setWebsite] = useState(user.website);
     let [dateOfBirth, setBOA] = useState(user.dateOfBirth);
     let [isEdittedBOA, setEdittedBOA] = useState(false);
 
-    const userName = fName + " " + lName;
+    // useEffect(() => {
+    //     setBio(user.bio)
+    // }, [])
 
     // handle save button to update profile
     const dispatch = useDispatch();
-    const saveProfileHandler = (user) => {
+    const saveProfileHandler = () => {
         console.log(user);
-        dispatch(updateProfile(user));
+        dispatch(updateProfile({
+            fullName, bio, location
+        }));
     }
 
     // navigate back to profile
@@ -31,6 +34,10 @@ const EditProfileComponent = () => {
 
     return (
         <div>
+        <pre>
+            {JSON.stringify(user, null, 2)}
+        </pre>
+
             <div className="row mb-2">
                 <i className="col-1 bi bi-x-lg float-start"
                     onClick={navigateProfile}></i>
@@ -47,8 +54,8 @@ const EditProfileComponent = () => {
             <div className="form-floating mb-3">
                 <textarea 
                     className="form-control" id="userNameTextarea" 
-                    value={fName}
-                    onChange={(e) => setFirstname(e.target.value)}></textarea>
+                    value={fullName}
+                    onChange={(e) => setFullName(e.target.value)}></textarea>
                 <label htmlFor="userNameTextarea">Name</label>
             </div>
             {/* Change User Bio */}
@@ -76,26 +83,28 @@ const EditProfileComponent = () => {
                 <label htmlFor="locationTextarea">Website</label>
             </div>
             {/* Change DOB */}
-            <div className="row mb-3">
-                <div className="col-2">Birth date</div>
+            <div className="d-flex">
+                <div className="">Birth date</div>
+                <i className="bi bi-dot"></i>
                 <button 
-                    className="col-1 btn btn-link p-0"
+                    className="btn btn-link p-0"
                     onClick={() => setEdittedBOA(!isEdittedBOA)}>Edit</button>
-                {/* If BOA is being editted */}
-                {
-                    isEdittedBOA && 
-                    <input 
-                        value={dateOfBirth} 
-                        onChange={(e) => {setBOA(e.target.value)}}></input>
-                }
-                {/* If BOA is not being editted */}
-                {
-                    !isEdittedBOA && <label>{dateOfBirth}</label>
-                }
-
             </div>
+            {/* If BOA is being editted */}
+            {
+                isEdittedBOA && 
+                <input 
+                    value={dateOfBirth} 
+                    onChange={(e) => {setBOA(e.target.value)}}></input>
+            }
+            {/* If BOA is not being editted */}
+            {
+                !isEdittedBOA && <label>{dateOfBirth}</label>
+            }
+            <br/>
+            <br/>
             {/* Professional Setting */}
-            <div>Switch to professional</div>
+            <div>Switch to professional <i className="bi bi-chevron-right float-end"></i></div>
         </div>
     )
 }

@@ -5,7 +5,7 @@ import WhoToFollowList from './who-to-follow-list';
 import ExploreComponent from './explore';
 import HomeComponent from './home';
 import ProfileComponent from './profile';
-import EditProfile from './edit-profile/indes';
+import EditProfileComponent from './edit-profile/indes';
 // import data for redux
 import { configureStore } from '@reduxjs/toolkit';
 import {Provider} from "react-redux";   // provide store for applications
@@ -31,7 +31,7 @@ function Tuiter() {
                         <Route path='home' element={<HomeComponent />} />
                         <Route path='explore' element={<ExploreComponent />} />
                         <Route path='profile' element={<ProfileComponent />} />
-                        <Route path='/profile/editProfile' element={<EditProfile />} />
+                        <Route path='/profile/editProfile' element={<EditProfileComponent />} />
                     </Routes>
                 </div>
                 <div className='d-sm-none d-md-none d-lg-block col-lg-4 col-xl-4'>

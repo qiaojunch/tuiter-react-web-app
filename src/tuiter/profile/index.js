@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { useSelector } from "react-redux";
 import { useNavigate } from "react-router";
 
@@ -10,6 +11,7 @@ const ProfileComponent = () => {
     const navigateEditProfile = () => {
         navigate("editProfile");
     }
+    useEffect(()=>{console.log(user);},[user])
 
     return (
         <div>

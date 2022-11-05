@@ -22,11 +22,12 @@ const EditProfileComponent = () => {
     const saveProfileHandler = () => {
         // retrieve new username 
         const newName = fullName.split(' ');
-        const firstName = newName[0]
-        const lastName = newName[1]
+        const firstName = newName[0];
+        const lastName = newName[1];
+        const handle = makeNewHandle(firstName, lastName);
         // update the user profile with changes
         dispatch(updateProfile({
-            firstName, lastName, bio, location, website, dateOfBirth
+            firstName, handle, lastName, bio, location, website, dateOfBirth
         }));
         // navigatte back to profile
         navigateProfile();
@@ -35,7 +36,14 @@ const EditProfileComponent = () => {
     // navigate back to profile
     const navigate = useNavigate();
     const navigateProfile = () => {
-        navigate("profile");
+        navigate("/tuiter/profile");
+    }
+
+    // create new handle according the username
+    const makeNewHandle =(s1, s2) => {
+        s1 = s1.toLowerCase();
+        s2 = s2.charAt(0).toUpperCase().concat(s2.slice(1));
+        return "@".concat(s1, s2);
     }
 
 

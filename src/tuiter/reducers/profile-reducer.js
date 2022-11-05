@@ -6,14 +6,12 @@ const profileSlice = createSlice({
     initialState: userProfile,
     reducers: {
         updateProfile(state, action) {
-            console.log(action.payload)
             state = {...state, ...action.payload}
-            //console.log(state)   // state is changed, but profile doesn't change
+            return state;   // need to return the new state 
         },
 
     }
 })
 
-
-export const {updateProfile} = profileSlice.actions;
 export default profileSlice.reducer;
+export const {updateProfile} = profileSlice.actions;

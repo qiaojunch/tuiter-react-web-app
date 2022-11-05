@@ -2,7 +2,7 @@ import { useEffect, useReducer, useState } from "react";
 import { useSelector } from "react-redux";
 import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router";
-import { updateProfile } from "../profile/profile-reducer";
+import { updateProfile } from "../reducers/profile-reducer";
 
 const EditProfileComponent = () => {
     const user = useSelector(state => state.profile);
@@ -13,30 +13,37 @@ const EditProfileComponent = () => {
     let [dateOfBirth, setBOA] = useState(user.dateOfBirth);
     let [isEdittedBOA, setEdittedBOA] = useState(false);
 
-    // useEffect(() => {
-    //     setBio(user.bio)
-    // }, [])
+    useEffect(() => {
+        setBio(user.bio)
+    }, [])
 
     // handle save button to update profile
     const dispatch = useDispatch();
     const saveProfileHandler = () => {
-        console.log(user);
+        // retrieve new username 
+        const newName = fullName.split(' ');
+        const firstName = newName[0]
+        const lastName = newName[1]
+        // update the user profile with changes
         dispatch(updateProfile({
-            fullName, bio, location
+            firstName, lastName, bio, location, website, dateOfBirth
         }));
+        // navigatte back to profile
+        navigateProfile();
     }
 
     // navigate back to profile
     const navigate = useNavigate();
     const navigateProfile = () => {
-        navigate("/tuiter/profile");
+        navigate("profile");
     }
+
 
     return (
         <div>
-        <pre>
+        {/* <pre>
             {JSON.stringify(user, null, 2)}
-        </pre>
+        </pre> */}
 
             <div className="row mb-2">
                 <i className="col-1 bi bi-x-lg float-start"
@@ -44,7 +51,7 @@ const EditProfileComponent = () => {
                 <p className="col-9">Edite profile</p>
                 <button 
                     className=" col-2 btn btn-dark btn-sm rounded-pill float-end"
-                    onClick={() => {saveProfileHandler(user)}}>Save</button>
+                    onClick={() => {saveProfileHandler()}}>Save</button>
             </div>
             <div className="position-relative">
                 <img src="/images/profile-banner.jpeg" width="100%" />

@@ -3,6 +3,7 @@ import { useNavigate } from "react-router";
 
 const ProfileComponent = () => {
     const user = useSelector(state => state.profile);
+
     const navigate = useNavigate();
 
     // handle click and navigate to edit-profile route

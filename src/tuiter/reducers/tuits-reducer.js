@@ -1,11 +1,11 @@
 import { createSlice } from "@reduxjs/toolkit";
-import tuits from "./tuits.json";
+import tuits from "../tuits/tuits.json";
 
 // create an object that represents the current logged-in user
 const currentUser = {
     userName: "NASA",
     handle: "@nasa",
-    image: "nasa.png",
+    image: "nasa-logo.png",
 };
 
 // create a template tuit object

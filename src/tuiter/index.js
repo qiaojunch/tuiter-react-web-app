@@ -1,4 +1,3 @@
-import Nav from '../nav';
 import {Routes, Route} from 'react-router';
 import NavigationSidebar from "./navigation-sidebar";
 import WhoToFollowList from './who-to-follow-list';
@@ -15,7 +14,7 @@ import profileReducer from './reducers/profile-reducer';
 
 // configure the store
 const store = configureStore(
-    {reducer: {who: whoReducer, tuits: tuitsReducer, profile: profileReducer}}
+    {reducer: {who: whoReducer, tuitsData: tuitsReducer, profile: profileReducer}}
     , window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
 );
 

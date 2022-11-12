@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import { createTuit } from "../reducers/tuits-reducer";   // import reducer function
 import { useDispatch } from "react-redux";             // import disaptch hook
+import { createTuitThunk } from "../../services/tuits-thunks";
 
 const WhatsHappening = () => {
     let [whatsHappening, setWhatsHappening] = useState("");
@@ -9,10 +9,11 @@ const WhatsHappening = () => {
     const tuitClickHandler = () => {
         // create a new tuit
         const newTuit = {
-            tuit: whatsHappening
+            tuit: whatsHappening,
+            "image": "nasa-logo.png"
         }
         // send tuit as action payload
-        dispatch(createTuit(newTuit));
+        dispatch(createTuitThunk(newTuit));
     }
 
     return (

@@ -5,7 +5,7 @@ import { useSelector } from 'react-redux';
 
 const PostSummaryList = () => {
     // retriever data from store
-    const postsArray = useSelector(state => state.tuits);
+    const postsArray = useSelector(state => state.tuitsData);
     
     return (
         <ul className='list-group'>
